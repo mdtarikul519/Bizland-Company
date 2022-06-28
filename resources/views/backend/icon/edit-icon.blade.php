@@ -43,7 +43,7 @@
 
                 <div class="form_group col-md-6">
                   <label for="icon">icon</label>
-                  <input type="text" name="icon" value="{{$editdata->icon}}" class="form-control">
+                  <input  name="icon" value="{{$editdata->icon}}" class="form-control">
                  </div>
 
                 <div class="form_group col-md-6">

@@ -64,10 +64,12 @@
                 <div class="form_group col-md-2 pt-3">
                  <img class="profile-user-img img-fluid " id="showImage" src="/upload/no-image-found.png" alt="User profile picture">
                 </div>
+
                 <div class="form_group col-md-6">
-                  <label for="icon">Long Title</label>
+                  <label for="icon">Icon</label>
                   <input type="text" name="icon" class="form-control">
                  </div>
+                 
                   <div class="form-group col-md-6" style="padding-top: 25px">
                    <input type="submit" value="submit" class="btn btn-primary">
                  </div>

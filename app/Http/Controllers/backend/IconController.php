@@ -40,31 +40,19 @@ class IconController extends Controller
       
     public function update(Request $request, $id)
     {
-        $data = About::find($id);
-        $data->short_title = $request->short_title;
-        $data->long_title = $request->long_title;
-        $data->description = $request->description;
-        $data->updated_by = Auth::user()->id;
-        if ($request->file('image')) {
-            $file = $request->file('image');
-            @unlink(public_path('upload/about_images/'.$data->image));
-            $filename =date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('upload/about_images'), $filename);
-            $data['image']= $filename;
-        }
+        $data = Icon::find($id);
         $data->icon = $request->icon;
+        $data->name = $request->name;
+        $data->number = $request->number;
         $data->save();
-        return redirect()->route('about.view')->with('success', 'Data updated successfully');
+        return redirect()->route('icon.view')->with('success', 'Data inserted successfully');
     }
-      
+   
       
     public function delete($id)
     {
-        $slider = Slider::find($id);
-        if (file_exists('upload/slider_images/' . $slider->image) and ! empty($slider->image)) {
-            unlink('upload/slider_images/' . $slider->image);
-        }
-        $slider->delete();
-        return redirect()->route('slider.view')->with('success', 'Data deleted successfully');
+        $icon = Icon::find($id);
+        $icon->delete();
+        return redirect()->route('icon.view')->with('success', 'Data deleted successfully');
     }
 }

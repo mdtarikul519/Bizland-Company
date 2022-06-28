@@ -43,12 +43,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{ $allData }}
 
                                 @foreach ($allData as $key => $icon)
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $icon->icon }}</td>
+                                        <td><i class="{{ $icon->icon }} fa-2x"></i></td>
                                         <td>{{ $icon->name }}</td>
                                         <td>{{ $icon->number }}</td>
                                         <td>

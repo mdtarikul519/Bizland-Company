@@ -44,7 +44,7 @@
                                     <div class="row">
 
                                         <div class="form_group col-md-6">
-                                            <label for="icon">Ncon</label>
+                                            <label for="icon">Icon</label>
                                             <input type="text" name="icon" class="form-control">
                                         </div>
                                         <div class="form_group col-md-6">
@@ -57,13 +57,7 @@
                                             <input type="text" name="name" class="form-control">
                                         </div>
 
-                                        <div class="form_group col-md-6" style="display:flex;margin-top:20px">
-                                            <input type="checkbox" name="test" id="test"><label
-                                                for="test">Test</label>
-                                        </div>
-
-
-
+                        
                                         <div class="form-group col-md-6" style="padding-top: 25px">
                                             <input type="submit" value="submit" class="btn btn-primary">
                                         </div>
